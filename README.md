@@ -1,27 +1,16 @@
-# TheGildedMelonServer
+# The Gilded Melon Server
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
+## Overview
 
-## Development server
+This is a website for The Gilded Melon Server.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## URLs
 
-## Code scaffolding
+GitHub Pages url: https://eugene-el.github.io/the.gilded.melon.server/.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Build status
 
-## Build
+[![angular-build-pipeline](https://github.com/Eugene-El/the.gilded.melon.server/actions/workflows/main.yml/badge.svg)](https://github.com/Eugene-El/the.gilded.melon.server/actions/workflows/main.yml)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+[![pages-build-deployment](https://github.com/Eugene-El/the.gilded.melon.server/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Eugene-El/the.gilded.melon.server/actions/workflows/pages/pages-build-deployment)
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
