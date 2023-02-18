@@ -4,7 +4,7 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
-        "build": "ng build --deploy-url /the.gilded.melon.server/"
+        "build": "ng build --base-href /the.gilded.melon.server/ --deploy-url /the.gilded.melon.server/"
     },
     "private": true,
     "dependencies": {
