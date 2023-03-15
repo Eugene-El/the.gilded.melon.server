@@ -1,0 +1,20 @@
+.copy-content {
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.copy-content:hover {
+    color: var(--dark);
+}
+
+.copy-content svg {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    fill: currentColor;
+}
+
+.tooltip-block {
+    position: absolute;
+}

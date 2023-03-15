@@ -1,0 +1,81 @@
+@keyframes spin {
+    from {
+        transform: rotateX(66deg) rotateZ(45deg) translateZ(var(--negative-side-size));
+    }
+    to {
+        transform: rotateX(66deg) rotateZ(405deg) translateZ(var(--negative-side-size));
+    }
+}
+
+.gilded-panel {
+    display: grid;
+    grid-template-columns: minmax(3em, auto) 1fr;
+    gap: 2em;
+}
+
+.glow {
+    filter: drop-shadow(2px 2px 10px var(--white)) drop-shadow(-2px -2px 10px var(--white));
+}
+
+.perspective-box {
+    --size: 4em;
+    --side-size: calc(var(--size) / 2);
+    --negative-side-size: calc(-1 * var(--side-size));
+    width: var(--size);
+    height: var(--size);
+    perspective: calc(var(--size) * 10);
+    perspective-origin: 50% 50%;
+}
+
+.cube {
+    width: calc(var(--size) / 2);
+    height: calc(var(--size) / 2);
+    position: relative;
+    transform-style: preserve-3d;
+    background-size: cover;
+    transform: rotateX(66deg) rotateZ(45deg) translateZ(var(--negative-side-size));
+    z-index: 100;
+    margin: auto;
+    transition: 1s transform;
+}
+
+.gilded-panel:hover .cube {
+    transform: rotateX(66deg) rotateZ(405deg) translateZ(var(--negative-side-size));
+    transition: 3s transform;
+}
+
+.cube>div {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("../../../assets/images/gilded_blackstone.svg");
+    background-size: cover;
+}
+
+.cube>div:nth-child(1) {
+    transform: translateZ(var(--side-size));
+}
+
+.cube>div:nth-child(2) {
+    transform: rotateY(180deg);
+}
+
+.cube>div:nth-child(3) {
+    transform: rotateX(-90deg) translateY(var(--negative-side-size));
+    transform-origin: top center;
+}
+
+.cube>div:nth-child(4) {
+    transform: rotateX(90deg) translateY(var(--side-size));
+    transform-origin: bottom center;
+}
+
+.cube>div:nth-child(5) {
+    transform: rotateY(270deg);
+    transform-origin: center left;
+}
+
+.cube>div:nth-child(6) {
+    transform: rotateY(-270deg);
+    transform-origin: top right;
+}

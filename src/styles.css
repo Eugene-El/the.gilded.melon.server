@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --white: #FFFFFD;
+    --gold: #f6c431;
+    --dark: #E29004;
+    --black: #000000;
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url(./assets/fonts/minecraft.ttf);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Minecraft';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: var(--gold);
+}
+
+h2 {
+    margin-bottom: 1.4em;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(./assets/images/BG1.svg);
+    background-position: 1em 1em;
+    color: var(--white)
+}
+
+.page {
+    margin-top: 4em;
+}
+
+.section {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    column-gap: 2em;
+}
+
+.info-grid.inverted {
+    grid-template-columns: 5fr 2fr;
+}
+
+.info-grid>* {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-area {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2em 3em;
+    margin: 1em;
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.2), 1em -1em 1em rgba(0, 0, 0, 0.2), -1em -1em 1em rgba(0, 0, 0, 0.2), -1em 1em 1em rgba(0, 0, 0, 0.2)
+}
+
+.text-center {
+    text-align: center;
+}
+
+.image-area {
+    padding: 0 2em;
+}

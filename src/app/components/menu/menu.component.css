@@ -1,0 +1,26 @@
+nav.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav.menu a {
+    --shadow: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--black);
+    box-shadow: 4px 4px 10px var(--black);
+    background-image: url("../../../assets/images/sign.svg");
+    min-width: 120px;
+    height: 65px;
+    background-size: cover;
+    text-shadow: -1px 0 var(--shadow), 0 1px var(--shadow), 1px 0 var(--shadow), 0 -1px var(--shadow);
+    font-weight: bold;
+}
+
+nav.menu a.selected {
+    --shadow: var(--black);
+    color: var(--gold);
+}

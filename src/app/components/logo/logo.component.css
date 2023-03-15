@@ -1,0 +1,9 @@
+.logo-container {
+    padding: 2em 0;
+}
+
+h1 {
+    text-align: center;
+    color: var(--white);
+    text-shadow: 2px 2px 5px var(--gold);
+}

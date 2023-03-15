@@ -1,0 +1,19 @@
+a {
+    color: var(--gold);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 2px solid currentColor;
+}
+
+a:hover {
+    color: var(--dark);
+}
+
+a svg {
+    margin: 0 0.2em;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    fill: currentColor;
+}

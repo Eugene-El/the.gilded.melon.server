@@ -1,0 +1,9 @@
+.feture-list {
+    display: grid;
+    gap: 2em;
+}
+
+p {
+    margin: 0 0 0.6em 0;
+    line-height: 1.4em;
+}
