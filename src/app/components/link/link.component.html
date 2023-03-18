@@ -1,6 +1,6 @@
 <a [routerLink]="link">
     <ng-content></ng-content>
-    <svg version="1.1" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+    <svg *ngIf="showIcon" version="1.1" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
         <rect x="6" y="1" width="1" height="1" />
         <rect x="7" y="1" width="1" height="1" />
         <rect x="8" y="1" width="1" height="1" />

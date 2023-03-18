@@ -1,26 +1,53 @@
 nav.menu {
     display: flex;
     justify-content: space-around;
+    font-family: 'Minecraft';
 }
 
 nav.menu a {
-    --shadow: var(--white);
+    --text-shadow: var(--white);
+    --shadow: var(--black);
+    color: var(--black);
+    cursor: pointer;
+    text-decoration: none;
+    text-shadow: -1px 0 var(--text-shadow), 0 1px var(--text-shadow), 1px 0 var(--text-shadow), 0 -1px var(--text-shadow);
+}
+
+nav.menu a span {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--black);
-    box-shadow: 4px 4px 10px var(--black);
-    background-image: url("../../../assets/images/sign.svg");
-    min-width: 120px;
-    height: 65px;
-    background-size: cover;
-    text-shadow: -1px 0 var(--shadow), 0 1px var(--shadow), 1px 0 var(--shadow), 0 -1px var(--shadow);
     font-weight: bold;
+    min-width: 120px;
+    aspect-ratio: 1.84615 / 1;
+    min-height: 65px;
+    margin-top: 1.4em;
+    margin-bottom: 0em;
+    box-shadow: 4px 4px 10px var(--shadow);
+    background-image: url("../../../assets/images/sign.svg");
+    background-size: cover;
+    transition: 0.2s box-shadow, 0.4s margin;
 }
 
 nav.menu a.selected {
-    --shadow: var(--black);
+    --text-shadow: var(--black);
     color: var(--gold);
+}
+
+nav.menu a:hover span {
+    --shadow: var(--white);
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+    box-shadow: 0 2px 10px var(--shadow), 0 -2px 10px var(--shadow);
+}
+
+@media screen and (max-width: 576px) {
+    nav.menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav.menu a {
+        width: 70%;
+        font-size: 7vw;
+    }
 }

@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 export class LinkComponent {
 
   @Input() link: string = "";
+  @Input() showIcon: boolean = true;
 
 }

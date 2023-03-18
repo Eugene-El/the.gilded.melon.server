@@ -79,3 +79,9 @@
     transform: rotateY(-270deg);
     transform-origin: top right;
 }
+
+@media screen and (max-width: 480px) {
+    .gilded-panel {
+        grid-template-columns: 1fr;
+    }
+}

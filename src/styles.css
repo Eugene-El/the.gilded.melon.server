@@ -10,11 +10,20 @@
     src: url(./assets/fonts/minecraft.ttf);
 }
 
+@font-face {
+    font-family: 'Gilded-Pixel';
+    src: url(./assets/fonts/new-gen.ttf);
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Minecraft';
+    font-family: 'Gilded-Pixel';
+}
+
+p {
+    font-size: 16px;
 }
 
 h1,
@@ -25,6 +34,7 @@ h5,
 h6 {
     margin: 0;
     color: var(--gold);
+    font-family: 'Minecraft';
 }
 
 h2 {
@@ -77,4 +87,34 @@ body {
 
 .image-area {
     padding: 0 2em;
+}
+
+@media screen and (max-width: 1024px) {
+    .section {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .info-grid,
+    .info-grid.inverted {
+        grid-template-columns: 1fr;
+    }
+    .image-area {
+        padding: 0 20% 10%;
+    }
+    .inverted>.image-area {
+        order: 1;
+    }
+    .inverted>.text-area {
+        order: 2;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
 }
