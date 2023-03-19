@@ -15,11 +15,23 @@
     src: url(./assets/fonts/new-gen.ttf);
 }
 
+@font-face {
+    font-family: 'Gilded-Not-Pixel';
+    src: url(./assets/fonts/Retron2000.ttf);
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
+}
+
+body {
     font-family: 'Gilded-Pixel';
+}
+
+.not-pixel {
+    font-family: 'Gilded-Not-Pixel';
 }
 
 p {

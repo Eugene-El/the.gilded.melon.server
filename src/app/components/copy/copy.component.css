@@ -2,6 +2,8 @@
     display: inline-flex;
     cursor: pointer;
     align-items: center;
+    user-select: none;
+    color: var(--gold)
 }
 
 .copy-content:hover {

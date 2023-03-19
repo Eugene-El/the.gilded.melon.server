@@ -6,3 +6,7 @@ p {
     margin: 0.6em 0;
     line-height: 1.4em;
 }
+
+#short-info p {
+    line-height: 1em;
+}

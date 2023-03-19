@@ -80,7 +80,7 @@
     transform-origin: top right;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 590px) {
     .gilded-panel {
         grid-template-columns: 1fr;
     }

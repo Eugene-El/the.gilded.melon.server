@@ -1,3 +1,8 @@
-.half-center {
-    margin: 0 30% 3em;
+img {
+    width: 86%;
+}
+
+p {
+    margin: 0.6em 0;
+    line-height: 1.4em;
 }

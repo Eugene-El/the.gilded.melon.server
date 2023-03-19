@@ -1,9 +1,9 @@
 a {
     color: var(--gold);
+    cursor: pointer;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    border-bottom: 2px solid currentColor;
 }
 
 a:hover {
