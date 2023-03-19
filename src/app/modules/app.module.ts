@@ -9,6 +9,7 @@ import { SharedModule } from './shared.module';
 import { RulesComponent } from '../pages/rules/rules.component';
 import { NotFoundComponent } from '../pages/not-found/not-found.component';
 import { FooterComponent } from '../components/footer/footer.component';
+import { GentlemanComponent } from '../pages/gentleman/gentleman.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from '../components/footer/footer.component';
     MenuComponent,
     RulesComponent,
     NotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    GentlemanComponent
   ],
   imports: [
     BrowserModule,
