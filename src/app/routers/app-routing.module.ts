@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'rules', component: RulesComponent },
   { path: 'not-found', component: NotFoundComponent },
   { path: 'gentleman', component: GentlemanComponent },
-  { path: 'map', loadChildren: () => new Promise(() => openExternalUrl("http://129.151.197.206:8100/")) },
+  { path: 'map', loadChildren: () => new Promise(() => openExternalUrl("http://80.82.222.184:8100/")) },
   { path: 'discord', loadChildren: () => new Promise(() => openExternalUrl("https://discord.gg/sGhxfbxryc")) },
   { path: 'plugins', loadChildren: () => import('../modules/plugins.module').then(m => m.PluginsModule) },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
