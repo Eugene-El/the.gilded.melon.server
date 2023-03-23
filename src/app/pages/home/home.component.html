@@ -8,12 +8,13 @@
             <div>
                 <p>Версия Minecraft: 1.19.3</p>
                 <p>IP адрес:
-                    <gms-copy>80.82.222.184:25566</gms-copy>
+                    <gms-copy>{{ serverAdress }}</gms-copy>
                 </p>
                 <p>Модов нет</p>
                 <p>Доступ по вайтлисту</p>
                 <p>Лицензия не требуется</p>
-                <p>Открытие 24 марта</p>
+                <p *ngIf="!isOpen">Открытие {{ openDateTimeText }}<br><i>(в вашем часовом поясе)</i></p>
+                <p *ngIf="isOpen && currentOnline">Сервер онлайн: {{ currentOnline }}</p>
                 <p>Наш
                     <gms-link link="/discord">Discord</gms-link>
                 </p>

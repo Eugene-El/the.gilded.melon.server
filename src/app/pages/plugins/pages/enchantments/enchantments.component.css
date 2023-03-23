@@ -1,0 +1,26 @@
+table {
+    width: 100%;
+}
+
+.e-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+}
+
+.e-grid>div {
+    padding: 0.6em;
+    border-bottom: 1px solid currentColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.e-grid>div:nth-child(1),
+.e-grid>div:nth-child(2),
+.e-grid>div:nth-child(3),
+.e-grid>div:nth-child(4),
+.e-grid>div:nth-child(5) {
+    font-weight: bold;
+    border-bottom: 2px solid currentColor;
+    text-align: center;
+}
