@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import openExternalUrl from '../helpers/openExternalUrl';
 import { GentlemanComponent } from '../pages/gentleman/gentleman.component';
 import { HomeComponent } from '../pages/home/home.component';
 import { NotFoundComponent } from '../pages/not-found/not-found.component';
@@ -16,16 +17,6 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'not-found', pathMatch: 'full' }
 ];
-
-function openExternalUrl(url: string)
-{
-  const newWindow = window.open(url, '_blank');
-  if (newWindow !== undefined && newWindow !== null) {
-    newWindow.focus();
-  } else {
-    window.location.href = url;
-  }
-}
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

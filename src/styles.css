@@ -53,6 +53,10 @@ h2 {
     margin-bottom: 1.4em;
 }
 
+ul {
+    list-style-type: square;
+}
+
 body {
     min-height: 100vh;
     background-image: url(./assets/images/BG1.svg);

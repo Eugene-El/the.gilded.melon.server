@@ -21,6 +21,54 @@ table {
 .e-grid>div:nth-child(4),
 .e-grid>div:nth-child(5) {
     font-weight: bold;
-    border-bottom: 2px solid currentColor;
+    border-bottom: 2px solid var(--white);
     text-align: center;
+    color: var(--gold);
+}
+
+@media screen and (max-width: 885px) {
+    .e-grid {
+        grid-template-columns: 1fr;
+    }
+    .e-grid>div:nth-child(1),
+    .e-grid>div:nth-child(2),
+    .e-grid>div:nth-child(3),
+    .e-grid>div:nth-child(4),
+    .e-grid>div:nth-child(5) {
+        display: none;
+    }
+    .e-grid>div {
+        border: none;
+        text-align: left;
+        display: inline;
+        padding: 0;
+    }
+    .e-grid>div:nth-child(5n-4)::before,
+    .e-grid>div:nth-child(5n-3)::before,
+    .e-grid>div:nth-child(5n-2)::before,
+    .e-grid>div:nth-child(5n-1)::before,
+    .e-grid>div:nth-child(5n)::before {
+        font-weight: bold;
+        color: var(--gold);
+    }
+    .e-grid>div:nth-child(5n-4)::before {
+        content: "Название: ";
+    }
+    .e-grid>div:nth-child(5n-3)::before {
+        content: "Максимальный уровень: ";
+    }
+    .e-grid>div:nth-child(5n-2)::before {
+        content: "Описание: ";
+    }
+    .e-grid>div:nth-child(5n-1)::before {
+        content: "Применяется на: ";
+    }
+    .e-grid>div:nth-child(5n)::before {
+        content: "Конфликтует с: ";
+    }
+    .e-grid>div:nth-child(5n)::after {
+        content: "";
+        display: block;
+        height: 1em;
+    }
 }

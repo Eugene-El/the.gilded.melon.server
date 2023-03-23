@@ -1,0 +1,36 @@
+.colors-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+}
+
+.samples-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.samples-grid span {
+    min-width: 3em;
+    display: inline-block;
+}
+
+@media screen and (max-width: 965px) {
+    .samples-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .colors-grid {
+        grid-template-columns: 1fr;
+    }
+    .samples-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 655px) {
+    .samples-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
