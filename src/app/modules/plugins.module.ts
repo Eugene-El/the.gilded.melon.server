@@ -10,6 +10,9 @@ import { EmoteCraftComponent } from '../pages/plugins/pages/emote-craft/emote-cr
 import { ColorsComponent } from '../pages/plugins/pages/colors/colors.component';
 import { SkipComponent } from '../pages/plugins/pages/skip/skip.component';
 import { McmmoComponent } from '../pages/plugins/pages/mcmmo/mcmmo.component';
+import { LiftComponent } from '../pages/plugins/pages/lift/lift.component';
+import { AutocraftComponent } from '../pages/plugins/pages/autocraft/autocraft.component';
+import { AutosorterComponent } from '../pages/plugins/pages/autosorter/autosorter.component';
 
 
 @NgModule({
@@ -21,6 +24,9 @@ import { McmmoComponent } from '../pages/plugins/pages/mcmmo/mcmmo.component';
     ColorsComponent,
     SkipComponent,
     McmmoComponent,
+    LiftComponent,
+    AutocraftComponent,
+    AutosorterComponent,
   ],
   imports: [
     CommonModule,
