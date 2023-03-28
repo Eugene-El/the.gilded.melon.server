@@ -10,3 +10,7 @@ p {
 #short-info p {
     line-height: 1em;
 }
+
+#online {
+    cursor: help;
+}

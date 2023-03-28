@@ -13,8 +13,9 @@
                 <p>Модов нет</p>
                 <p>Доступ по вайтлисту</p>
                 <p>Лицензия не требуется</p>
-                <p *ngIf="!isOpen">Открытие {{ openDateTimeText }}<br><i>(в вашем часовом поясе)</i></p>
-                <p *ngIf="isOpen && currentOnline">Сервер онлайн: {{ currentOnline }}</p>
+                <p *ngIf="currentOnline" id="online" (mouseover)="showTooltip()" (mouseout)="resetTooltip()">
+                    Онлайн сервера: {{ currentOnline }}
+                </p>
                 <p>Наш
                     <gms-link link="/discord">Discord</gms-link>
                 </p>

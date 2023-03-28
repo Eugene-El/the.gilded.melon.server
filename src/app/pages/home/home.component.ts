@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SERVER_ADDRESS } from 'src/app/helpers/constants';
+import { MOUSE_TOOLTIP_MSG } from 'src/app/helpers/events';
 import { ServerStatusService } from 'src/app/services/server-status.service';
 
 @Component({
@@ -10,16 +11,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   serverAdress: string = SERVER_ADDRESS;
   currentOnline: string = "";
-  openDateTime: Date = new Date(Date.UTC(2023, 2, 24, 15));
-  openDateTimeText: string = this.openDateTime
-    .toLocaleString("ru-RU", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      hour: "numeric",
-      minute: "numeric"
-    });
-  isOpen: boolean = new Date() > this.openDateTime;
+  currentPlayers: string[] = [];
 
   constructor(
     protected serverStatusService: ServerStatusService
@@ -41,7 +33,15 @@ export class HomeComponent implements OnInit, OnDestroy {
       .then(data => {
         if (data.status == "success" && data.online && data.players)
           this.currentOnline = `${data.players.now} / ${data.players.max}`;
+          this.currentPlayers = data.players.sample.map(s => s.name) ?? [];
       });
   }
 
+  showTooltip() {
+    MOUSE_TOOLTIP_MSG.emit(this.currentPlayers.join("<br/>"));
+  }
+
+  resetTooltip() {
+    MOUSE_TOOLTIP_MSG.emit("");
+  }
 }
