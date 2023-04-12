@@ -2,3 +2,8 @@
 <gms-menu></gms-menu>
 <router-outlet></router-outlet>
 <gms-footer></gms-footer>
+<div id="mouse-tooltip" #mouseTooltip>
+    <gms-tooltip *ngIf="tooltipContent">
+        <div [innerHtml]="tooltipContent"></div>
+    </gms-tooltip>
+</div>
