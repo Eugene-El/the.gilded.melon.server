@@ -6,10 +6,12 @@ import { HomeComponent } from '../pages/home/home.component';
 import { NotFoundComponent } from '../pages/not-found/not-found.component';
 import { RulesComponent } from '../pages/rules/rules.component';
 import { MAP_ADDRESS } from '../helpers/constants';
+import { LeadersComponent } from '../pages/leaders/leaders.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'rules', component: RulesComponent },
+  { path: 'leaders', component: LeadersComponent },
   { path: 'not-found', component: NotFoundComponent },
   { path: 'gentleman', component: GentlemanComponent },
   { path: 'map', loadChildren: () => new Promise(() => openExternalUrl(MAP_ADDRESS)) },

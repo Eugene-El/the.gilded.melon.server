@@ -1,0 +1,42 @@
+<div class="page section">
+    <div class="text-area">
+        <div class="header-grid">
+            <h1>Лидеры</h1>
+            <gms-link [showIcon]="false" (click)="loadData()" (mouseover)="showLastUpdateTooltip()" (mouseout)="resetTooltip()">Обновить</gms-link>
+        </div>
+        <br>
+
+        <div *ngIf="isLoading || isError" class="text-center">
+            <img src="./assets/gifs/professor-x.gif">
+            <p *ngIf="isLoading">
+                Получаем информацию ...
+            </p>
+            <p *ngIf="isError">
+                Произошла ошибка, попробуйте позже ...
+            </p>
+        </div>
+
+        <div *ngIf="!isLoading && data && data.length > 0 && selectedSkill" class="skills-grid">
+            <div>
+                <div *ngFor="let skill of skills; index as i;">
+                    <gms-link [showIcon]="false" (click)="selectSkill(skill)" [active]="skill == selectedSkill">{{ skill.name }}</gms-link>
+                    <hr *ngIf="i == 0 || i == 5 || i == 10">
+                </div>
+            </div>
+            <div class="flex">
+                <div class="text-center player-grid">
+                    <ng-container *ngFor="let player of data | slice:0; index as i;">
+                        <div (mouseover)="showTooltip(player)" (mouseout)="resetTooltip()" class="text-center flex">
+                            <span *ngIf="i == 0">🥇</span>
+                            <span *ngIf="i == 1">🥈</span>
+                            <span *ngIf="i == 2">🥉</span>
+                            <span *ngIf="i > 2">{{ i + 1 }}</span>
+                        </div>
+                        <div (mouseover)="showTooltip(player)" (mouseout)="resetTooltip()">{{ player.name }}</div>
+                        <div (mouseover)="showTooltip(player)" (mouseout)="resetTooltip()">[{{ selectedSkill.sort(player) }}]</div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

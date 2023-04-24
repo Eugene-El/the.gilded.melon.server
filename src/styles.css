@@ -109,6 +109,21 @@ body {
     position: absolute;
 }
 
+.flex {
+    display: flex;
+}
+
+.flex.text-center {
+    justify-content: center;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 1em;
+}
+
 @media screen and (max-width: 1024px) {
     .section {
         margin-left: 2em;

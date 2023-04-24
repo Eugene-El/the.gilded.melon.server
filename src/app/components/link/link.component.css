@@ -6,7 +6,8 @@ a {
     align-items: center;
 }
 
-a:hover {
+a:hover,
+a.active {
     color: var(--dark);
 }
 

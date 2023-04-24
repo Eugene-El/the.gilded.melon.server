@@ -10,6 +10,7 @@ import { RulesComponent } from '../pages/rules/rules.component';
 import { NotFoundComponent } from '../pages/not-found/not-found.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { GentlemanComponent } from '../pages/gentleman/gentleman.component';
+import { LeadersComponent } from '../pages/leaders/leaders.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { GentlemanComponent } from '../pages/gentleman/gentleman.component';
     RulesComponent,
     NotFoundComponent,
     FooterComponent,
-    GentlemanComponent
+    GentlemanComponent,
+    LeadersComponent
   ],
   imports: [
     BrowserModule,

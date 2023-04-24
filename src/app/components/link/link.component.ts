@@ -9,5 +9,6 @@ export class LinkComponent {
 
   @Input() link: string = "";
   @Input() showIcon: boolean = true;
+  @Input() active: boolean = false;
 
 }
