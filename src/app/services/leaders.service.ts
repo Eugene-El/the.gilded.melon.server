@@ -11,7 +11,7 @@ export class LeadersService {
   constructor() { }
 
   public getServerStatus(): Promise<McmmoData> {
-    return fetch(`http://${SERVER_IP}:${MCMMO_API_PORT}`)
+    return fetch(`https://${SERVER_IP}:${MCMMO_API_PORT}`)
       .then(response => response.json())
       .then(data => {
         data.players = data.players.map((r: any) => new McmmoPlayer(r));
