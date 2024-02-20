@@ -11,7 +11,11 @@ export class LeadersService {
   constructor() { }
 
   public getServerStatus(): Promise<McmmoData> {
-    return fetch(`https://${SERVER_IP}:${MCMMO_API_PORT}`)
+    return fetch(`https://cors-anywhere.herokuapp.com/http://${SERVER_IP}:${MCMMO_API_PORT}`, {
+      headers: [
+        ["Origin", null as any]
+      ]
+    })
       .then(response => response.json())
       .then(data => {
         data.players = data.players.map((r: any) => new McmmoPlayer(r));
