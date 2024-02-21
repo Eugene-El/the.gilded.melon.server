@@ -11,7 +11,7 @@ export class LeadersService {
   constructor() { }
 
   public getServerStatus(): Promise<McmmoData> {
-    return fetch(`https://cors-anywhere.herokuapp.com/http://${SERVER_IP}:${MCMMO_API_PORT}`, {
+    return fetch(`https://cors-proxy.fringe.zone/http://${SERVER_IP}:${MCMMO_API_PORT}`, {
       headers: [
         ["Origin", null as any]
       ]
