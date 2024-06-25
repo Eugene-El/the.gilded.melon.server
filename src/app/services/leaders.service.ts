@@ -11,11 +11,7 @@ export class LeadersService {
   constructor() { }
 
   public getServerStatus(): Promise<McmmoData> {
-    return fetch(`https://thingproxy.freeboard.io/fetch/http://${SERVER_IP}:${MCMMO_API_PORT}`, {
-      headers: [
-        ["Origin", null as any]
-      ]
-    })
+    return fetch(`https://api.allorigins.win/raw?url=http://${SERVER_IP}:${MCMMO_API_PORT}`)
       .then(response => response.json())
       .then(data => {
         data.players = data.players.map((r: any) => new McmmoPlayer(r));
