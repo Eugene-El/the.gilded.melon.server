@@ -9,16 +9,16 @@ import { MAP_ADDRESS } from '../helpers/constants';
 import { LeadersComponent } from '../pages/leaders/leaders.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'rules', component: RulesComponent },
-  { path: 'leaders', component: LeadersComponent },
-  { path: 'not-found', component: NotFoundComponent },
-  { path: 'gentleman', component: GentlemanComponent },
-  { path: 'map', loadChildren: () => new Promise(() => openExternalUrl(MAP_ADDRESS)) },
-  { path: 'discord', loadChildren: () => new Promise(() => openExternalUrl("https://discord.gg/sGhxfbxryc")) },
-  { path: 'plugins', loadChildren: () => import('../modules/plugins.module').then(m => m.PluginsModule) },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', redirectTo: 'not-found', pathMatch: 'full' }
+  // { path: 'home', component: HomeComponent },
+  // { path: 'rules', component: RulesComponent },
+  // { path: 'leaders', component: LeadersComponent },
+  // { path: 'not-found', component: NotFoundComponent },
+  // { path: 'gentleman', component: GentlemanComponent },
+  // { path: 'map', loadChildren: () => new Promise(() => openExternalUrl(MAP_ADDRESS)) },
+  // { path: 'discord', loadChildren: () => new Promise(() => openExternalUrl("https://discord.gg/sGhxfbxryc")) },
+  // { path: 'plugins', loadChildren: () => import('../modules/plugins.module').then(m => m.PluginsModule) },
+  // { path: '', redirectTo: 'home', pathMatch: 'full' },
+  // { path: '**', redirectTo: 'not-found', pathMatch: 'full' }
 ];
 
 @NgModule({

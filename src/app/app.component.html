@@ -1,9 +1,60 @@
-<gms-logo></gms-logo>
-<gms-menu></gms-menu>
-<router-outlet></router-outlet>
-<gms-footer></gms-footer>
-<div id="mouse-tooltip" #mouseTooltip>
+<!-- <gms-logo></gms-logo> -->
+<!-- <gms-menu></gms-menu> -->
+<!-- <router-outlet></router-outlet> -->
+<!-- <gms-footer></gms-footer> -->
+<!-- <div id="mouse-tooltip" #mouseTooltip>
     <gms-tooltip *ngIf="tooltipContent">
         <div [innerHtml]="tooltipContent" #mouseTooltipContent></div>
     </gms-tooltip>
+</div> -->
+
+<style>
+    #goldExperienceRequiem {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        height: 88vh;
+        animation-name: goldExperienceRequiemAnimation;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+        filter:
+            drop-shadow(4px 4px 8px var(--white))
+            drop-shadow(-4px -4px 8px var(--white));
+    }
+
+    #lastInfo {
+        height: 100vh;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #lastInfo > div {
+        margin: 4em;
+    }
+
+    h1 {
+        color: var(--white);
+        text-shadow: 2px 2px 5px var(--gold);
+        margin-bottom: 2em;
+    }
+
+    @keyframes goldExperienceRequiemAnimation {
+        from { right: -30%; }
+        to { right: 0; }
+    }
+</style>
+
+<img id="goldExperienceRequiem" src="./assets/images/goldExperienceRequiem.png" />
+<div id="lastInfo">
+    <div class="text-area text-center">
+        <h1>Вы были атакованы Gold Experience Requiem!</h1>
+        <p>К сожалению сервер закрыт.</p>
+        <p>
+            <i>Скоро тут появится ссылка для скачивания мира.</i>
+            <br/>
+            <i>Возможно...</i>
+        </p>
+    </div>
 </div>
