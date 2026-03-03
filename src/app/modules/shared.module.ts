@@ -7,6 +7,7 @@ import { TooltipComponent } from '../components/tooltip/tooltip.component';
 import { GildedBlackstoneComponent } from '../components/gilded-blackstone/gilded-blackstone.component';
 import { LinkComponent } from '../components/link/link.component';
 import { RouterModule } from '@angular/router';
+import { ExternalLink } from '../components/external-link/external-link.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     CopyComponent,
     TooltipComponent,
     GildedBlackstoneComponent,
-    LinkComponent
+    LinkComponent,
+    ExternalLink
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { RouterModule } from '@angular/router';
     CopyComponent,
     TooltipComponent,
     GildedBlackstoneComponent,
-    LinkComponent
+    LinkComponent,
+    ExternalLink
   ]
 })
 export class SharedModule { }
